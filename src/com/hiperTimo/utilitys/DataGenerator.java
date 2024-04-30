@@ -8,11 +8,12 @@ public class DataGenerator {
     protected static String productID;
 
     public static String RandomProductName(){
-        int randomNum = (int)Math.floor(Math.random() *(12 - 0 + 1) + 0);
+        int randomNum = (int)(Math.random() *(12 - 0 + 1) + 0);
         return productName[randomNum];
     }
-    public static void RandomClientName(){
-
+    public static String RandomClientName(){
+        int randomNum = (int)(Math.random() *(12 - 0 + 1) + 0);
+        return clientName[randomNum];
     }
     public static void RandomClientWallet(){
 
@@ -21,7 +22,7 @@ public class DataGenerator {
         return (float)Math.floor(Math.random() *(1000 - 0 + 1) + 0);
     }
     public static int RandomProductID(){
-        int randomNum = (int)Math.floor(Math.random() *(20 - 0 + 1) + 0);
+        int randomNum = (int)(Math.random() *( 1000000- 1000 + 1) + 1000);
         return randomNum;
     }
 
