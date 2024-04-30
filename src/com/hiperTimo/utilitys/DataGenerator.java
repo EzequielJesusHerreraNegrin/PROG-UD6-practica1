@@ -15,8 +15,9 @@ public class DataGenerator {
         int randomNum = (int)(Math.random() *(12 - 0 + 1) + 0);
         return clientName[randomNum];
     }
-    public static void RandomClientWallet(){
-
+    public static float RandomClientWallet(){
+        float randomNum = (float)(Math.random() *( 1000000- 1000 + 1) + 1000);
+        return randomNum;
     }
     public static float RandomProductPrice(){
         return (float)Math.floor(Math.random() *(1000 - 0 + 1) + 0);
