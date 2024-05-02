@@ -8,7 +8,7 @@ public class Product {
     protected float price;
 
     public Product() {
-        this.name = DataGenerator.RandomClientName();
+        this.name = DataGenerator.RandomProductName();
         this.id = DataGenerator.RandomProductID();
         this.price = DataGenerator.RandomProductPrice();
     }
