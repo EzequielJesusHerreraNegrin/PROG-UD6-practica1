@@ -33,7 +33,7 @@ public class Product {
 
     public String toString(){
         return "Nombre del articulo: "+this.name+
-                "\nPrecio del articulo: "+this.price+
+                "\nPrecio del articulo: "+this.price+"€"+
                 "\nnumero de serie : "+this.id;
     }
 }
