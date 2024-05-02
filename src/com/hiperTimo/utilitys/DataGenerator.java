@@ -1,8 +1,8 @@
 package com.hiperTimo.utilitys;
 
 public class DataGenerator {
-    protected static String[] productName = {"Sofía","Juan","María","Alejandro","Valentina","Diego","Camila","Carlos","Gabriela","Andrés","Lucía","Daniel","Isabella","Mateo","Valeria","Santiago","Ana","Nicolás","Laura","Manuel"};
-    protected static String[] clientName = {"Café gourmet","Smartphone Xplorer","Auriculares SoundWave","Zapatillas AirRun","Camisa Evergreen","Tableta Digital Plus","Perfume Elegance","Crema Hidratante SilkSkin","Mochila Adventure","Reloj ChronoMaster","Bolígrafo Diamond","Barra de chocolate Supreme"};
+    private static String[] productName = {"Sofía","Juan","María","Alejandro","Valentina","Diego","Camila","Carlos","Gabriela","Andrés","Lucía","Daniel","Isabella","Mateo","Valeria","Santiago","Ana","Nicolás","Laura","Manuel"};
+    private static String[] clientName = {"Café gourmet","Smartphone Xplorer","Auriculares SoundWave","Zapatillas AirRun","Camisa Evergreen","Tableta Digital Plus","Perfume Elegance","Crema Hidratante SilkSkin","Mochila Adventure","Reloj ChronoMaster","Bolígrafo Diamond","Barra de chocolate Supreme"};
     protected static String clientWallet;
     protected static String productPrice;
     protected static String productID;
