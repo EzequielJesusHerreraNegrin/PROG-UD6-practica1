@@ -8,11 +8,11 @@ public class DataGenerator {
     protected static String productID;
 
     public static String RandomProductName(){
-        int randomNum = (int)(Math.random() *(12 - 0 + 1) + 0);
+        int randomNum = (int)(Math.random() *(11 - 0 + 1) + 0);
         return productName[randomNum];
     }
     public static String RandomClientName(){
-        int randomNum = (int)(Math.random() *(12 - 0 + 1) + 0);
+        int randomNum = (int)(Math.random() *(19 - 0 + 1) + 0);
         return clientName[randomNum];
     }
     public static float RandomClientWallet(){
