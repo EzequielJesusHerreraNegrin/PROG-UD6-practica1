@@ -51,7 +51,13 @@ public class App {
                     break;
             
                 case "4":
-                    
+                System.out.println("""
+                    -----------------*OPCION*-----------------
+                            4. Ver clientes pendientes.
+                    ------------------------------------------
+                        """);
+
+                    cajero.checkQueue(cajero);
                     break;
             
                 case "0":
