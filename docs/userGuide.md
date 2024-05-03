@@ -26,3 +26,6 @@ Esta guía explica la funcionalidad del menú gráfico:
 
 0. **Cerrar Programa:** Cierra el programa, asegurándose primero de que no queden clientes sin atender. En caso de haber clientes en espera, el programa no se cerrará.
 
+![alt text](image-9.png)
+
+Espero que les halla servido de ayuda.
