@@ -31,7 +31,7 @@ public class Cashier {
     }
 
     public void enqueueClient(){
-        if (checkoutPointOperativeEstate = true) {
+        if (checkoutPointOperativeEstate == true) {
             Client client = new Client();
             fila.add(client);   
             System.out.println("\nUn cliente esta esperando en la fila.");
@@ -41,14 +41,14 @@ public class Cashier {
     }
 
     public void openCheckoutPoint(){
-        if (this.checkoutPointOperativeEstate = false) {
+        if (this.checkoutPointOperativeEstate == false) {
             this.checkoutPointOperativeEstate = true;
             System.out.println("\nLa caja numero"+this.checkoutPoint+" se ha abierto.");
         }
     }
     
     public void closeCheckoutPoint(){
-        if (this.checkoutPointOperativeEstate = true && fila.isEmpty() == true) {
+        if (this.checkoutPointOperativeEstate == false && fila.isEmpty() == true) {
             this.checkoutPointOperativeEstate = false;
             System.out.println("\nLa caja numero"+this.checkoutPoint+" se ha cerrado.");
         } else {
