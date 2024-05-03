@@ -51,14 +51,14 @@ public class Cashier {
     public void openCheckoutPoint(){
         if (this.checkoutPointOperativeEstate == false) {
             this.checkoutPointOperativeEstate = true;
-            System.out.println("\nLa caja numero"+this.checkoutPoint+" se ha abierto.");
+            System.out.println("\nLa caja numero "+this.checkoutPoint+" se ha abierto.");
         }
     }
     
     public void closeCheckoutPoint(){
         if (this.checkoutPointOperativeEstate == false && fila.isEmpty() == true) {
             this.checkoutPointOperativeEstate = false;
-            System.out.println("\nLa caja numero"+this.checkoutPoint+" se ha cerrado.");
+            System.out.println("\nLa caja numero "+this.checkoutPoint+" se ha cerrado.");
         } else {
             System.out.println("\nTodavía hay clientes en la cola, atiendelos antes de cerrar.");
         }
@@ -74,7 +74,7 @@ public class Cashier {
 
     public void checkQueue(){
         if (fila.isEmpty() == false) {
-            System.out.println("Hay "+fila.size()+" clietnes, esperando a ser atendidos en la caja"+this.checkoutPoint+".");
+            System.out.println("Hay "+fila.size()+" clietnes, esperando a ser atendidos en la caja "+this.checkoutPoint+".");
         } else{
             System.out.println("No hay nadie esperando en la caja "+this.checkoutPoint+".");
         }

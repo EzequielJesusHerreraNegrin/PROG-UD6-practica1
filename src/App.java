@@ -23,16 +23,21 @@ public class App {
             switch (option) {
                 case "1":
                     System.out.println("""
-                        -----------------*OPCION*-----------------
-                                    1. Abrir caja.
-                        ------------------------------------------
+                    -----------------*OPCION*-----------------
+                                1. Abrir caja.
+                    ------------------------------------------
                             """);
                     cajero.openCheckoutPoint();
                     
                     break;
             
                 case "2":
-                    
+                System.out.println("""
+                    -----------------*OPCION*-----------------
+                                1. Abrir caja.
+                    ------------------------------------------
+                        """);
+                    cajero.enqueueClient();
                     break;
             
                 case "3":
