@@ -4,14 +4,14 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Cashier {
-    private int checkoutPoint;
-    private Boolean checkoutPointEstate = false;
+    private int checkoutPoint = 1;
+    private Boolean checkoutPointOperativeEstate = false;
     private Queue<Client> fila = new LinkedList<Client>();
     
     public Cashier() {
         this.checkoutPoint = checkoutPoint;
         this.fila = fila;
-        this.checkoutPointEstate = checkoutPointEstate;
+        this.checkoutPointOperativeEstate = checkoutPointOperativeEstate;
     }
 
     public int getCheckoutPoint() {
@@ -31,7 +31,7 @@ public class Cashier {
     }
 
     public void enqueueClient(){
-        if (checkoutPointEstate = true) {
+        if (checkoutPointOperativeEstate = true) {
             Client client = new Client();
             fila.add(client);   
             System.out.println("\nUn cliente esta esperando en la fila.");
@@ -41,16 +41,16 @@ public class Cashier {
     }
 
     public void openCheckoutPoint(){
-        if (checkoutPointEstate = false) {
-            checkoutPointEstate = true;
-            System.out.println("\nLa caja numero"+checkoutPoint+" se ha abierto.");
+        if (this.checkoutPointOperativeEstate = false) {
+            this.checkoutPointOperativeEstate = true;
+            System.out.println("\nLa caja numero"+this.checkoutPoint+" se ha abierto.");
         }
     }
     
     public void closeCheckoutPoint(){
-        if (checkoutPointEstate = true && fila.isEmpty() == true) {
-            checkoutPointEstate = false;
-            System.out.println("\nLa caja numero"+checkoutPoint+" se ha cerrado.");
+        if (this.checkoutPointOperativeEstate = true && fila.isEmpty() == true) {
+            this.checkoutPointOperativeEstate = false;
+            System.out.println("\nLa caja numero"+this.checkoutPoint+" se ha cerrado.");
         } else {
             System.out.println("\nTodavía hay clientes en la cola, atiendelos antes de cerrar.");
         }
@@ -61,6 +61,22 @@ public class Cashier {
             System.out.println(fila.poll());
         } else{
             System.out.println("No hay nadie esperando en la fila.");
+        }
+    }
+
+    public void checkQueue(){
+        if (fila.isEmpty() == false) {
+            System.out.println("Hay "+fila.size()+" clietnes, esperando a ser atendidos en la caja"+this.checkoutPoint+".");
+        } else{
+            System.out.println("No hay nadie esperando en la caja "+this.checkoutPoint+".");
+        }
+    }
+
+    public void closeMarket(){
+        if (this.checkoutPointOperativeEstate == false) {
+            System.out.println("El establecimiento ha cerrado sus puertas.");
+        } else{
+            System.out.println("Antes de cerrar el local, debe cerrar la caja para no recibir mas clientes.");
         }
     }
 }

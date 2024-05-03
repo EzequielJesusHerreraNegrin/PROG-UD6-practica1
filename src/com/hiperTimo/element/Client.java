@@ -2,8 +2,7 @@ package com.hiperTimo.element;
 
 import java.util.Stack;
 
-import com.hiperTimo.utilitys.DataGenerator;
-
+import com.hiperTimo.utils.DataGenerator;
 
 public class Client  extends Product{
     protected String name;
@@ -11,7 +10,7 @@ public class Client  extends Product{
 
     public Client() {
         this.name = DataGenerator.RandomClientName();
-        this.basket = basket;
+        FillBaskect();
     }
 
     public String getName() {
@@ -21,7 +20,7 @@ public class Client  extends Product{
     public void setName(String name) {
         this.name = name;
     }
-
+    
     public Stack<Product> getBasket() {
         return basket;
     }
@@ -29,10 +28,9 @@ public class Client  extends Product{
     public void setBasket(Stack<Product> basket) {
         this.basket = basket;
     }
-
+    
     public void FillBaskect(){
         int randomNum = (int)(Math.random() *(11 - 0 + 1) + 0);
-
         for (int i = 0; i <= randomNum; i++) {
             Product product = new Product();
             basket.push(product);
