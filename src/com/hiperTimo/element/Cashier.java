@@ -13,6 +13,14 @@ public class Cashier {
         this.fila = fila;
         this.checkoutPointOperativeEstate = checkoutPointOperativeEstate;
     }
+    
+    public Boolean getCheckoutPointOperativeEstate() {
+        return checkoutPointOperativeEstate;
+    }
+
+    public void setCheckoutPointOperativeEstate(Boolean checkoutPointOperativeEstate) {
+        this.checkoutPointOperativeEstate = checkoutPointOperativeEstate;
+    }
 
     public int getCheckoutPoint() {
         return checkoutPoint;
@@ -72,11 +80,14 @@ public class Cashier {
         }
     }
 
-    public void closeMarket(){
+    public String closeMarket(){
+        String value ="";
         if (this.checkoutPointOperativeEstate == false) {
             System.out.println("El establecimiento ha cerrado sus puertas.");
+            value ="0";
         } else{
             System.out.println("Antes de cerrar el local, debe cerrar la caja para no recibir mas clientes.");
         }
+        return value;
     }
 }
