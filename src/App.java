@@ -34,14 +34,20 @@ public class App {
                 case "2":
                 System.out.println("""
                     -----------------*OPCION*-----------------
-                                1. Abrir caja.
+                        2. Añadir un cliente a la cola.
                     ------------------------------------------
                         """);
                     cajero.enqueueClient();
                     break;
             
                 case "3":
-                    
+                System.out.println("""
+                    -----------------*OPCION*-----------------
+                            3. Atender a un clietne.
+                    ------------------------------------------
+                        """);
+
+                    cajero.serveClient();
                     break;
             
                 case "4":
