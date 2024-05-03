@@ -1,6 +1,6 @@
 package com.hiperTimo.element;
 
-import com.hiperTimo.utilitys.DataGenerator;
+import com.hiperTimo.utils.DataGenerator;
 
 public class Product {
     protected String name;
