@@ -13,6 +13,14 @@ public class Cashier {
         this.fila = fila;
         this.checkoutPointOperativeEstate = checkoutPointOperativeEstate;
     }
+    
+    public Boolean getCheckoutPointOperativeEstate() {
+        return checkoutPointOperativeEstate;
+    }
+
+    public void setCheckoutPointOperativeEstate(Boolean checkoutPointOperativeEstate) {
+        this.checkoutPointOperativeEstate = checkoutPointOperativeEstate;
+    }
 
     public int getCheckoutPoint() {
         return checkoutPoint;
@@ -43,14 +51,14 @@ public class Cashier {
     public void openCheckoutPoint(){
         if (this.checkoutPointOperativeEstate == false) {
             this.checkoutPointOperativeEstate = true;
-            System.out.println("\nLa caja numero"+this.checkoutPoint+" se ha abierto.");
+            System.out.println("\nLa caja numero "+this.checkoutPoint+" se ha abierto.");
         }
     }
     
     public void closeCheckoutPoint(){
         if (this.checkoutPointOperativeEstate == false && fila.isEmpty() == true) {
             this.checkoutPointOperativeEstate = false;
-            System.out.println("\nLa caja numero"+this.checkoutPoint+" se ha cerrado.");
+            System.out.println("\nLa caja numero "+this.checkoutPoint+" se ha cerrado.");
         } else {
             System.out.println("\nTodavía hay clientes en la cola, atiendelos antes de cerrar.");
         }
@@ -64,19 +72,31 @@ public class Cashier {
         }
     }
 
-    public void checkQueue(){
+    public void checkQueue(Cashier cajero){
         if (fila.isEmpty() == false) {
-            System.out.println("Hay "+fila.size()+" clietnes, esperando a ser atendidos en la caja"+this.checkoutPoint+".");
+            System.out.println(cajero); 
         } else{
             System.out.println("No hay nadie esperando en la caja "+this.checkoutPoint+".");
         }
     }
 
-    public void closeMarket(){
+    public String closeMarket(){
+        String value ="";
         if (this.checkoutPointOperativeEstate == false) {
             System.out.println("El establecimiento ha cerrado sus puertas.");
+            value ="0";
         } else{
             System.out.println("Antes de cerrar el local, debe cerrar la caja para no recibir mas clientes.");
         }
+        return value;
+    }
+
+    @Override
+    public String toString(){
+        String mensaje="Número de caja: "+this.checkoutPoint+  "\nTotal de clientes:  "+fila.size()+ "\n Clientes en la fila: "; 
+        for (Client client : fila) {
+            mensaje += "\n"+". "+client.getName();
+        }
+                return mensaje;
     }
 }
