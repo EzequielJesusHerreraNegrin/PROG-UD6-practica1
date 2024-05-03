@@ -82,7 +82,7 @@ public class Cashier {
 
     public String closeMarket(){
         String value ="";
-        if (this.checkoutPointOperativeEstate == false) {
+        if (this.checkoutPointOperativeEstate == false || fila.isEmpty() == true) {
             System.out.println("El establecimiento ha cerrado sus puertas.");
             value ="0";
         } else{
