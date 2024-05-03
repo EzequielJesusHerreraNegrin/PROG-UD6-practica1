@@ -31,7 +31,9 @@ public class Client  extends Product{
     }
 
     public void FillBaskect(){
-        for (int i = 0; i <= 11; i++) {
+        int randomNum = (int)(Math.random() *(11 - 0 + 1) + 0);
+
+        for (int i = 0; i <= randomNum; i++) {
             Product product = new Product();
             basket.push(product);
         }
@@ -43,5 +45,14 @@ public class Client  extends Product{
             System.out.println("\n"+productCounter+". "+product);
             productCounter++;
         }
+    }
+
+    @Override
+    public String toString(){
+        String mensaje="Nombre: "+this.name+  "\nTotal de productos: "+basket.size()+ "\n Lista de articulos de la cesta: "; 
+        for (Product product : basket) {
+            mensaje += "\n"+". "+product;
+        }
+                return mensaje;
     }
 }
